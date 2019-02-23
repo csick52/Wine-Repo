@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SMU Data Sciene ETL Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SMU Data Science ETL Project</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/index.html">Home</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/explore.html">Explore</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/transform.html">Transform</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/wine_ipynb.html">Wine Review Notebook</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/weather_ipynb.html">Weather Data Notebook</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/load.html">Load</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/analysis.html">Analysis</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h1>A Quantitative Comparison Analysis of Spanish Wine Scores vs Weather Data.</h1>
+  <h2>Is there a correlation between temperature, precipitation and wine scores?</h2>
+    <h3>Wine Review data transformation:</h3>        
+        <p>
+            <ol>
+                <li>Pulled JSON file into Jupyter Notebook.</li>
+                <li>Read the JSON file into a Pandas DataFrame.</li>
+                <li>Dropped unneeded columns.</li>
+                <li>Dropped all rows where country != 'Spain'.</li>
+                <li>Used a 'For' loop to search for year strings in Title.</li>
+                <li>Appended the years to a list in the order they were found in.</li>
+                <li>Remove wines where no year was present in Title.</li>
+                <li>Remove wines that weren't harvested between 2000-2012.</li>
+                <li>Append the list of years.</li>
+                <li>Push data to MySQL.</li>
+                <li>Confirm the tables.</li>
+                <li>Use MatPlotLib to create scatter plot.</li>
+            </ol>
+        </p>
+    <h3>Weather data transformation:</h3>
+        <p>
+            <ol>
+                <li>Pulled in three .csv files with 5 years worth of weather data each.</li>
+                <li>Removed null values.</li>
+                <li>Paired down to just the columns needed.</li>
+                <li>Transferred the rain data from a string to float.</li>
+                <li>Found that we had non numerical values in the rain column.</li>
+                <li>Removed the non numerical values.</li>
+                <li>Successfully transferred rain data to float.</li>
+                <li>Averaged data grouped by year.</li>
+                <li>Reset index so that year could be a column in sql.</li>
+                <li>Exported to mysql.</li>
+            </ol>
+        </P>
+</div>
+
+</body>
+</html>

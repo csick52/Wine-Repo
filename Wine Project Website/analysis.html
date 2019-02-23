@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SMU Data Sciene ETL Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SMU Data Science ETL Project</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/index.html">Home</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/explore.html">Explore</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/transform.html">Transform</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/wine_ipynb.html">Wine Review Notebook</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/weather_ipynb.html">Weather Data Notebook</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/load.html">Load</a></li>
+      <li class="active"><a href="file:///C:/Users/guyrt/Desktop/Wine%20Project%20Website/analysis.html">Analysis</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h1>A Quantitative Comparison Analysis of Spanish Wine Scores vs Weather Data</h1>
+  <h2>Is there a correlation between temperature, precipitation and wine scores?</h2>
+  <p>Issues:
+        When we pulled the data we had hoped to combine on the province since both sets had province columns. We learned that the wine data had the provinces grouped into 8 regions where the weather data had the 50 provinces. Due to the time constraints of the project we opted to change the join to year.
+        Our wines did not have a year column, however the year information was listed in the name of the wine. Christopher wrote a for loop statement to drop the year values outside the year values of the weather dataset. Then he wrote a for loop to extract the years into their own column so that the data could be joined.
+        If we had more time we would break down the wine and weather data by year and region to see if there is more correlation.</p>
+        
+        <p>We had issues pulling the weather data into a single merged table due to the size. We had to do the same code across the three sets of data as we chipped away at the total bulk until we finally merged after all of the cleaning.</p>
+        
+        <p>Limitations of the data:
+        Not knowing what criteria is used to create the wine score. We also do not have the information from the score card used to create the score since different tasters created the score.
+        We dropped 2012 from the final graph because the weather data only had information from January and February of that year.</p>
+</div>
+
+</body>
+</html>
