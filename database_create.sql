@@ -7,20 +7,21 @@ create table wine (
     points int,
     province varchar(30),
     variety varchar(100),
+    years int,
     primary key (id)
 );
 
 create table weather (
 	id int auto_increment,
-    province varchar(30),
+    year int,
     average_temp double,
     average_rain double,
     average_sun double,
     primary key (id)
 );
 
-drop table weather;
-
-select distinct(province) from wine;
+select * from wine;
 
 select * from weather;
+
+select * from wine where variety = "Cabernet Sauvignon";
